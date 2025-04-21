@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Estilo base === */
+body {
+  @apply bg-white text-[#490e46] font-sans;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* === Utilitários customizados === */
+@layer utilities {
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+}
+
+/* === Estilo da onda animada === */
+.wave-container {
+  transform: rotate(-5deg) scale(1.2);
+}
+
+.wave {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(circle at center,
+    rgba(73, 14, 70, 0.1) 2px,
+    transparent 2px
+  );
+  background-size: 40px 40px;
+  animation: wave 8s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-20%, -20%);
+  }
+}
+
+@media (max-width: 768px) {
+  .wave {
+    background-size: 30px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .wave {
+    background-size: 20px 20px;
+  }
+}
+
+/* === Fontes Space Grotesk === */
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mDoQDjQSkFtoMM3T6r8E7mPbF4Cw.woff2') format('woff2');
+}
