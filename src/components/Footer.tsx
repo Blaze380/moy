@@ -8,7 +8,7 @@ export default function Footer (): ReactElement {
   const screen: ScreenType = useScreen();
 
   return (
-    <footer className="bg-[#0A0A0A]a bg-fuchsia-500 text-black  w-screen">
+    <footer className="bg-[#0A0A0A]a bg-fuchsia-500a bg-[#490E46]  text-gray-200  w-screen">
       <div className={`flex justify-around flex-row-reverse my-10 ${screen==="mobile"? "flex-acol justifay-center":""}`}>
         <div className={`flex items-start flex-wrap justify-around ${ screen === "mobile" ? "flex-col justify-center space-y-8" : "w-[60%]" }`}>
           <div>
@@ -30,7 +30,7 @@ export default function Footer (): ReactElement {
           </div>
         </div>
         <div className={`flex flex-col ${screen==="mobile"?"flex-raow":""}`}>
-          <div className={`flex justify-start flex-col space-y-5 text-sm text-black font-bold items-center ${screen==="mobile"?"flexa-row":""}`}>
+          <div className={`flex justify-start flex-col space-y-5 text-sm text-white font-bold items-center ${screen==="mobile"?"flexa-row":""}`}>
             <img src="/logoo/loff.png" className="w-[90px] " alt="Moy Logo" />
             <p> © Moy Agency - 2025</p>
             <div className="flex items-center justify-between space-x-2">

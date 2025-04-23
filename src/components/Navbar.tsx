@@ -26,8 +26,9 @@ export default function Navbar ({ currentPage }: Props) {
     }
   }, [lastScrollY]);
 
+
   return (
-    <nav className={` w-full top-0 z-50 h-16 fixed bg-white transition-transform ${ show ? `translate-y-0 ${ lastScrollY > 1 ? "shadow-md" : "" }` : "-translate-y-full" }`}>
+    <nav className={` w-full top-0 z-50 h-16 fixed   bg-white transition-transform ${ show ? `translate-y-0 ${ lastScrollY > 1 ? "shadow-md" : "" }` : "-translate-y-full" }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between -space-x-3">
           <a href='index.html' className="flex items-center space-x-2 select-none">

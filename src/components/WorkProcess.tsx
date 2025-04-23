@@ -8,6 +8,7 @@ import {
 } from "./ui/accordion";
 import { vectors } from '../lib/vectors';
 import { motion } from "framer-motion";
+import { FAQAccordion } from './FAQ';
 
 
 export default function WorkProcess () {
@@ -40,7 +41,7 @@ export default function WorkProcess () {
   ];
 
   return (
-    <section className="container mx-auto px-6 py-20" id='processo'>
+  <section className="py-20 " id='processo'>
       <div className="text-center mb-16">
         <span className="text-[#490E46] text-sm uppercase tracking-wider bg-white border border-[#E0E0E0] px-4 py-2 rounded-full font-medium">
           NOSSO PROCESSO
@@ -51,18 +52,18 @@ export default function WorkProcess () {
       </div>
       <div className="">
 
-        <Accordion type="single" defaultValue='0' collapsible className="w-full">
+        <Accordion type="single" defaultValue='0' collapsible className="w-full   max-w-screen ">
           {processes.map((process, index) => (
             <motion.div
-            initial={{y:80,opacity:0}}
-            whileInView={{y:0,opacity:1}}
-            transition={{duration:.4,delay:(index+4)/10}}
-            viewport={{once:false,amount:.2}}
+              initial={{ y: 0, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: .4, delay: (index + 4) / 10 }}
+              viewport={{ once: false, amount: .2 }}
             >
               <AccordionItem value={index + ""} >
-                <AccordionTrigger>{(index + 1) + ". " + process.title}</AccordionTrigger>
-                <AccordionContent>
-                  <div className={`flex items-center justify-around ${ index % 2 !== 0 ? "flex-row-reverse" : "" }`}>
+                <AccordionTrigger className=''>{(index + 1) + ". " + process.title}</AccordionTrigger>
+                <AccordionContent className=''>
+                  <div className={`  flex items-center justify-around ${ index % 2 !== 0 ? "flex-row-reverse" : "" }`}>
                     <div>
                       <img src={process.imgSrc} className='w-[150px] h-[150px]' alt="" />
                     </div>

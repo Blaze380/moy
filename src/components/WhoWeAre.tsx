@@ -9,8 +9,8 @@ import { motion } from "framer-motion";
 export default function WhoWeAre (): ReactElement {
     const screen: ScreenType = useScreen();
     return (
-        <motion.section initial={{y:60,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:.3}}>
-            <div className={`flex justify-evenly items-center  ${ screen === "mobile" ? "flex-col justify-center space-y-10" : "space-x-36" }`}>
+        <motion.section initial={{y:60,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:.3}} className="">
+            <div className={`flex justify-evenly w-full  items-center  ${ screen === "mobile" ? "flex-col justify-center space-y-10" : "space-x-36" }`}>
                 <div>
                     <img src="/7276.jpg" className="w-[400px] " alt="Quem Somos" />
                 </div>

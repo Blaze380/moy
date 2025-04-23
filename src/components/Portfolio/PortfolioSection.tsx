@@ -35,7 +35,7 @@ export default function PortfolioSection () {
 
 
   return (
-    <section className="py-20 bg-white" id="portifolio">
+    <section className="py-20 bg-whit" id="portifolio">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <span className="text-[#490E46] text-sm uppercase tracking-wider bg-white border border-[#E0E0E0] px-4 py-2 rounded-full font-medium">

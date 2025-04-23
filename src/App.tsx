@@ -47,7 +47,7 @@ function App () {
 
   return (
     <ScreenContext.Provider value={screen}>
-      <div className="min-h-screen bg-white text-black flex flex-col items-center justify-center">
+      <div className="min-h-screen bg-white text-black  flex flex-col items-center justify-center ">
         <Navbar  currentPage='home'/>
         <Hero />
         <Partners />
@@ -62,7 +62,7 @@ function App () {
         {/* <Testimonials /> */}
 
         {/* CTA - Contato */}
-        <section className="container mx-auto px-6 py-20" id="contact">
+        <section className=" px-6 py-20" id="contact">
           <div className="bg-gray-100 rounded-2xl p-12 text-center shadow-md">
             <h2 className="text-4xl font-bold mb-6">
               Entre em contacto

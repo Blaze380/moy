@@ -65,7 +65,7 @@ export default function Stats() {
 
   //TODO is hidden
   return (
-    <section className="container mx-auto px-6 py-20 hidden">
+    <section className="container mx-auto px-6 py-20 hidden border-2 border-red-900">
       <div className="flex justify-around">
         {stats.map((stat, index) => (
           <StatItem key={index} {...stat} />

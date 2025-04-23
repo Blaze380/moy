@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
 interface FAQItem {
   question: string;
-  answer: string;
+  answer: ReactNode;
 }
 
-const FAQAccordion = ({ question, answer, isOpen, onClick }:
+export const FAQAccordion = ({ question, answer, isOpen, onClick }:
   FAQItem & { isOpen: boolean; onClick: () => void }) => (
   <div className="border-b border-gray-800">
     <button

@@ -3,22 +3,25 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
-export default function Partners() {
+export default function Partners () {
   const partners = [
     { name: 'Image 01', logo: '/logos/01.png' },
     { name: 'Image 02', logo: '/logos/02.png' },
     { name: 'Image 03', logo: '/logos/03.png' },
-    { name: 'Image 04', logo: '/logos/04.png' },
+    //{ name: 'Image 04', logo: '/logos/04.png' },
     { name: 'Image 05', logo: '/logos/05.png' },
     { name: 'Image 06', logo: '/logos/05s.png' },
-    // { name: 'Image 06', logo: 'https://sparktechh.com/images/logo.svg' },
+    { name: 'Image 06', logo: 'https://sparktechh.com/images/logo.svg' },
+    { name: "Ape", logo: "/logos/ape.png" },
+    { name: 'b1', logo: '/logos/b1.png' },
+    { name: 'tsenane', logo: '/logos/tsenane.png' },
   ];
 
   return (
-    <section className="py-2 bg-gray-50a  bg-fuchsia-300  w-full">
+    <section className="py-2  bg-fuchsia-300  w-full ">
       <div className="space-y-2">
         <h3 className={`text-2xl text-center  text-gray-700 font-bold atext-gray-500 text-wrap`}>
-        Escolhido por marcas que confiam no nosso trabalho
+          Escolhido por marcas que confiam no nosso trabalho
         </h3>
 
         <Swiper

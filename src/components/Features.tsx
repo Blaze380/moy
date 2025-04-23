@@ -89,17 +89,17 @@ export default function Features () {
         <div className="flex justify-center w-full  m-0">
           {screen !== "mobile" ? (
 
-            <Tabs className="" defaultValue={features[0].tabTriggerValue}>
+            <Tabs className={``} defaultValue={features[0].tabTriggerValue}>
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: .4 }}
               >
-              <TabsList className="flex flex-wrap h-fit pt-2 pb-2 mb-10">
-                {features.map((feature: FeaturesCardType, i: number): ReactElement => (
-                  <TabsTrigger className="text-sm" key={i} value={feature.tabTriggerValue}>{feature.tabTitle}</TabsTrigger>
-                ))}
-              </TabsList>
+                <TabsList className="flex flex-wrap fit  pt-2 pb-2 mb-10">
+                  {features.map((feature: FeaturesCardType, i: number): ReactElement => (
+                    <TabsTrigger className="text-sm" key={i} value={feature.tabTriggerValue}>{feature.tabTitle}</TabsTrigger>
+                  ))}
+                </TabsList>
               </motion.div>
               {features.map((feature: FeaturesCardType, i: number): ReactElement => (
                 <TabsContent value={feature.tabTriggerValue} className='flex items-center justify-around'>
@@ -125,13 +125,11 @@ export default function Features () {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-              <div className='flex flex-col-reverse justify-center items-center'>
                 <FeaturesCard
                   title={features[feature].title}
                   description={features[feature].description}
                   img={features[feature].imgSrc}
                 />
-              </div>
             </div>
 
           )}
