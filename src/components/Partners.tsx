@@ -15,18 +15,18 @@ export default function Partners() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
-        <h3 className="text-2xl text-center mb-12 text-gray-500">
-          Já escolhido pelos líderes
+    <section className="py-2 bg-gray-50a  bg-fuchsia-300  w-full">
+      <div className="space-y-2">
+        <h3 className={`text-2xl text-center  text-gray-700 font-bold atext-gray-500 text-wrap`}>
+        Escolhido por marcas que confiam no nosso trabalho
         </h3>
-        
+
         <Swiper
           slidesPerView={2}
           spaceBetween={30}
           loop={true}
           autoplay={{
-            delay: 1000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -39,11 +39,11 @@ export default function Partners() {
         >
           {partners.map((partner) => (
             <SwiperSlide key={partner.name}>
-              <div className="flex items-center justify-center h-32 p-4">
+              <div className="flex items-center justify-center h-32  p-4">
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="max-h-16 max-w-[120px] object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                  className="max-h-16 max-w-[120px] filter brightness-0 contrast-200 object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
             </SwiperSlide>

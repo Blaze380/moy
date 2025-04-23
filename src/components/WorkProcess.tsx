@@ -1,42 +1,41 @@
 import React from 'react';
 import { MessageCircle, Calendar, Layers, Smile } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "./ui/accordion";
+import { vectors } from '../lib/vectors';
+import { motion } from "framer-motion";
 
-const ProcessCard = ({ icon: Icon, title, description }: {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-}) => (
-  <div className="bg-[#F9F9F9] p-8 rounded-2xl shadow-sm hover:shadow-md transition">
-    <div className="w-12 h-12 bg-[#EEE] rounded-full flex items-center justify-center mb-6">
-      <Icon className="w-6 h-6 text-[#490E46]" />
-    </div>
-    <h3 className="text-xl font-semibold mb-4">{title}</h3>
-    <p className="text-gray-600">{description}</p>
-  </div>
-);
 
-export default function WorkProcess() {
-  
+export default function WorkProcess () {
+
   const processes = [
     {
       icon: MessageCircle,
       title: "Estudo de Mercado",
-      description: "Analisamos o mercado, público-alvo e tendências para entender o cenário e as oportunidades."
+      description: "Analisamos o mercado, público-alvo e tendências para entender o cenário e as oportunidades.",
+      imgSrc: vectors.investimentData,
     },
     {
       icon: Calendar,
       title: "Idealização Estratégica",
-      description: "Desenhamos uma estratégia digital personalizada, criativa e orientada para resultados concretos."
+      description: "Desenhamos uma estratégia digital personalizada, criativa e orientada para resultados concretos.",
+      imgSrc: vectors.businessDecisions,
     },
     {
       icon: Layers,
       title: "Execução de Alta Qualidade",
-      description: "Colocamos a estratégia em prática com excelência em design, conteúdo e tecnologia."
+      description: "Colocamos a estratégia em prática com excelência em design, conteúdo e tecnologia.",
+      imgSrc: vectors.qaEngineers,
     },
     {
       icon: Smile,
       title: "Monitoramento Contínuo",
-      description: "Acompanhamos os resultados, otimizamos campanhas e garantimos melhorias constantes."
+      description: "Acompanhamos os resultados, otimizamos campanhas e garantimos melhorias constantes.",
+      imgSrc: vectors.monitoring,
     }
   ];
 
@@ -50,10 +49,32 @@ export default function WorkProcess() {
           Um processo simples para resultados excepcionais.
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        {processes.map((process, index) => (
-          <ProcessCard key={index} {...process} />
-        ))}
+      <div className="">
+
+        <Accordion type="single" defaultValue='0' collapsible className="w-full">
+          {processes.map((process, index) => (
+            <motion.div
+            initial={{y:80,opacity:0}}
+            whileInView={{y:0,opacity:1}}
+            transition={{duration:.4,delay:(index+4)/10}}
+            viewport={{once:false,amount:.2}}
+            >
+              <AccordionItem value={index + ""} >
+                <AccordionTrigger>{(index + 1) + ". " + process.title}</AccordionTrigger>
+                <AccordionContent>
+                  <div className={`flex items-center justify-around ${ index % 2 !== 0 ? "flex-row-reverse" : "" }`}>
+                    <div>
+                      <img src={process.imgSrc} className='w-[150px] h-[150px]' alt="" />
+                    </div>
+                    <div>
+                      <p>{process.description}</p>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
+          ))}
+        </Accordion>
       </div>
     </section>
   );

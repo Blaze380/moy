@@ -6,7 +6,7 @@ interface FAQItem {
   answer: string;
 }
 
-const FAQAccordion = ({ question, answer, isOpen, onClick }: 
+const FAQAccordion = ({ question, answer, isOpen, onClick }:
   FAQItem & { isOpen: boolean; onClick: () => void }) => (
   <div className="border-b border-gray-800">
     <button
@@ -52,7 +52,7 @@ export default function FAQ() {
       answer: "Ambos! Atendemos tanto projetos únicos quanto contratos contínuos, dependendo da necessidade do cliente. Nosso compromisso é adaptar a solução ideal para cada realidade."
     }
   ];
-  
+
 
   return (
     <section className="container mx-auto px-6 py-20" id='faqs'>
@@ -60,7 +60,7 @@ export default function FAQ() {
       <span className="text-[#490e46] text-sm uppercase tracking-wider bg-white border border-gray-300 inline-block px-4 py-2 rounded-full font-medium">FAQS</span>
         <h2 className="text-3xl mt-4">Nós temos as respostas</h2>
       </div>
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto ">
         {faqs.map((faq, index) => (
           <FAQAccordion
             key={index}

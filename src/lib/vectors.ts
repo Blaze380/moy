@@ -1,0 +1,21 @@
+const absPath: string = "/vectors/";
+export const vectors = {
+    allTheData: `${ absPath }all-the-data.svg`,
+    marketing: `${ absPath }marketing.svg`,
+    emailCampaign: `${ absPath }email-campaign.svg`,
+    onlineAd: `${ absPath }online-ad.svg`,
+    pieGraph: `${ absPath }pie-graph.svg`,
+    process: `${ absPath }process.svg`,
+    productPhotography: `${ absPath }product-photography.svg`,
+    socialDashboard: `${ absPath }social-dashboard.svg`,
+    socialThinking: `${ absPath }social-thinking.svg`,
+    webSearch: `${ absPath }web-search.svg`,
+    goals: `${ absPath }goals.svg`,
+    statusUpdate: `${ absPath }status-update.svg`,
+    predictiveAnalytics: `${ absPath }predictive-analytics.svg`,
+    monitoring: `${ absPath }monitoring.svg`,
+    qaEngineers: `${ absPath }qa-engineers.svg`,
+    businessDecisions: `${ absPath }business-decisions.svg`,
+    investimentData: `${ absPath }investment-data.svg`,
+}
+//`${absPath}`,
