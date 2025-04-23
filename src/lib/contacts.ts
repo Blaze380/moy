@@ -5,6 +5,9 @@ const social: SocialNetworksType = {
         link: "https://instagram.com/moy.agency",
         icon: Instagram,
     },
+    facebook:{
+        link:"https://google.com",
+    }
 }
 export const contacts = {
     phone: "+25844189947",

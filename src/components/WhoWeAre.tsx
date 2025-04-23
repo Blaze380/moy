@@ -12,7 +12,7 @@ export default function WhoWeAre (): ReactElement {
         <motion.section initial={{y:60,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:.3}}>
             <div className={`flex justify-evenly items-center  ${ screen === "mobile" ? "flex-col justify-center space-y-10" : "space-x-36" }`}>
                 <div>
-                    <img src="https:placehold.co/300x300" alt="Quem Somos" />
+                    <img src="/7276.jpg" className="w-[400px] " alt="Quem Somos" />
                 </div>
                 <div className={`w-[40%] space-y-8 ${ screen === "mobile" ? "w-[80%] text-wrap  text-justify" : "" }`}>
                     <div>
