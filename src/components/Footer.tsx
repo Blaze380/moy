@@ -8,7 +8,7 @@ export default function Footer (): ReactElement {
   const screen: ScreenType = useScreen();
 
   return (
-    <footer className="bg-[#0A0A0A]a bg-fuchsia-500a bg-[#490E46]  text-gray-200  w-screen">
+    <footer className="bg-[#0A0A0A]a bg-fuchsia-500a  bg-[#490E46]  text-gray-200  w-screen">
       <div className={`flex justify-around flex-row-reverse my-10 ${screen==="mobile"? "flex-acol justifay-center":""}`}>
         <div className={`flex items-start flex-wrap justify-around ${ screen === "mobile" ? "flex-col justify-center space-y-8" : "w-[60%]" }`}>
           <div>

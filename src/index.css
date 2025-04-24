@@ -157,6 +157,8 @@ body {
   }
 }
 
-body{
-  overflow-x:hidden;
-}
+html,body{
+  overflow-x:hidden}
+ *a{
+  outline:1px solid red;
+ }

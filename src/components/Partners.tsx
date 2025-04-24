@@ -21,7 +21,7 @@ export default function Partners () {
     <section className="py-2  bg-fuchsia-300  w-full ">
       <div className="space-y-2">
         <h3 className={`text-2xl text-center  text-gray-700 font-bold atext-gray-500 text-wrap`}>
-          Escolhido por marcas que confiam no nosso trabalho
+          Marcas que confiam em nós
         </h3>
 
         <Swiper

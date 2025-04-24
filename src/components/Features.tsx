@@ -73,7 +73,7 @@ export default function Features () {
     <section className="py-20 bg-white" id='services'>
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-[#490e46] text-sm uppercase tracking-wider bg-white border border-gray-300 inline-block px-4 py-2 rounded-full font-medium">
+          <span className="text-primary text-sm uppercase tracking-wider bg-[#a5059d]/10 border border-primary inline-block px-4 py-2 rounded-full font-medium">
             Nossos serviços
           </span>
           <motion.h2 className="text-3xl mt-4 text-black"
@@ -95,7 +95,7 @@ export default function Features () {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: .4 }}
               >
-                <TabsList className="flex flex-wrap fit  pt-2 pb-2 mb-10">
+                <TabsList className="flex flex-wrap h-fit pt-2 pb-2 mb-10">
                   {features.map((feature: FeaturesCardType, i: number): ReactElement => (
                     <TabsTrigger className="text-sm" key={i} value={feature.tabTriggerValue}>{feature.tabTitle}</TabsTrigger>
                   ))}

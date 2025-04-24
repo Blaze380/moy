@@ -43,9 +43,9 @@ export default function WorkProcess () {
   return (
   <section className="py-20 " id='processo'>
       <div className="text-center mb-16">
-        <span className="text-[#490E46] text-sm uppercase tracking-wider bg-white border border-[#E0E0E0] px-4 py-2 rounded-full font-medium">
-          NOSSO PROCESSO
-        </span>
+          <span className="text-primary text-sm uppercase tracking-wider bg-[#a5059d]/10 border border-primary inline-block px-4 py-2 rounded-full font-medium">
+          Nosso Processo
+          </span>
         <h2 className="text-3xl mt-4 font-bold">
           Um processo simples para resultados excepcionais.
         </h2>

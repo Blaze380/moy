@@ -35,14 +35,14 @@ export default function PortfolioSection () {
 
 
   return (
-    <section className="py-20 bg-whit" id="portifolio">
+    <section className="py-20 w-full bg-whit " id="portifolio">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <span className="text-[#490E46] text-sm uppercase tracking-wider bg-white border border-[#E0E0E0] px-4 py-2 rounded-full font-medium">
-            NOSSO PORTFÓLIO
+          <span className="text-primary text-sm uppercase tracking-wider bg-[#a5059d]/10 border border-primary inline-block px-4 py-2 rounded-full font-medium">
+          Nosso Portifólio
           </span>
-          <motion.h2 initial={{x:-100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:.5}} className="text-3xl mt-4 font-bold">Veja o que podemos criar para você.</motion.h2>
-          <motion.p initial={{x:100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:.5}} className="text-gray-600 mt-4">Explore nossos projetos de design inovadores e soluções criativas que transformam ideias em resultados reais.</motion.p>
+          <motion.h2 initial={{x:-100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:.5}} className={`text-3xl mt-4 text-wrap font-bold `}>Veja o que podemos criar para você.</motion.h2>
+          <motion.p initial={{x:100,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:.5}} className="text-gray-600 mt-4 text-wrap">Explore nossos projetos de design inovadores e soluções criativas que transformam ideias em resultados reais.</motion.p>
         </div>
         <motion.div initial={{opacity:0}} whileInView={{opacity:1}} transition={{duration:.6}}>
           <Carousel>

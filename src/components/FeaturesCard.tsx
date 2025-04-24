@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function FeaturesCard ({ title, description, img, }: { title: string, description: string, img: string }): ReactElement {
     const screen: ScreenType = useScreen();
     return (
-        <div className='flex flex-col-reverse text-wrap justify-center items-center'>
+        <div className={`flex  text-wrap justify-around  ${screen==="mobile" ? "flex-col-reverse justify-center items-center" : "items-start flex-row"}  `}>
             <motion.div className={` space-y-5 ${ screen === "mobile" ? "w-[80%] " : "w-[40%]" }`}
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
