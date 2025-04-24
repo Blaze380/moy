@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 export default function WhoWeAre (): ReactElement {
     const screen: ScreenType = useScreen();
     return (
-        <motion.section initial={{y:60,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:.3}} className="">
+        <motion.section id="quem-somos" initial={{y:60,opacity:0}} whileInView={{y:0,opacity:1}} transition={{duration:.3}} className="">
             <div className={`flex justify-evenly w-full  items-center  ${ screen === "mobile" ? "flex-col justify-center space-y-10" : "space-x-36" }`}>
                 <div>
                     <img src="/7276.jpg" className="w-[400px] " alt="Quem Somos" />
@@ -23,7 +23,7 @@ export default function WhoWeAre (): ReactElement {
                         <a href={`tel:${ contacts.phone }`}>
                             <IButton>Entre em contacto</IButton>
                         </a>
-                        <a href="#">
+                        <a href="#quem-somos">
                             <IButton variant="outline">Saiba Mais</IButton>
                         </a>
                     </div>

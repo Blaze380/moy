@@ -40,16 +40,16 @@ export default function Navbar ({ currentPage }: Props) {
           <div className="flex items-center justify-evenly space-x-12">
             {/* Desktop menu */}
             <div className="hidden md:flex text-sm items-center space-x-8">
-              <a href="index.html" className={`text-gray-900 hover:text-gray-600 transition ${ currentPage === "home" ? "text-primary font-bold " : "" }`}>Início</a>
-              <a href="index.html#services" className="text-gray-900 hover:text-gray-600 transition">Serviços</a>
-              <a href="index.html#portifolio" className="text-gray-900 hover:text-gray-600 transition">Portifólio</a>
-              <a href="index.html#processo" className="text-gray-900 hover:text-gray-600 transition">Quem Somos</a>
+              <a href="/" className={`text-gray-900 hover:text-gray-600 transition ${ currentPage === "home" ? "text-primary font-bold " : "" }`}>Início</a>
+              <a href="#services" className="text-gray-900 hover:text-gray-600 transition">Serviços</a>
+              <a href="#portifolio" className="text-gray-900 hover:text-gray-600 transition">Portifólio</a>
+              <a href="#processo" className="text-gray-900 hover:text-gray-600 transition">Quem Somos</a>
             </div>
 
             {/* Desktop button */}
             <div className="hidden md:block">
               <a href="#contact">
-                <IButton bolded>Fale Conosco</IButton>
+                <IButton cta bolded>Fale Conosco</IButton>
               </a>
             </div>
           </div>

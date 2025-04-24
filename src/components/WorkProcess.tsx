@@ -8,7 +8,7 @@ import {
 } from "./ui/accordion";
 import { vectors } from '../lib/vectors';
 import { motion } from "framer-motion";
-import { FAQAccordion } from './FAQ';
+import { FAQAccordion } from '../FAQ';
 
 
 export default function WorkProcess () {

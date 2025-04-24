@@ -15,14 +15,14 @@ export default function Hero (): ReactElement {
         <div className={` ${ screen === "mobile" ? "w-96  text-center" : "w-[40%]" } z-10 space-y-5 flex flex-col justify-center items-center`}>
           <div>
             <motion.div whileInView={{ x: 0, opacity: 1 }} transition={{ duration: .5 }} initial={{ x: screen !== "mobile" ? -200 : 0, opacity: 0 }} className={`flex items-center space-x-2 ${ screen === "mobile" ? "justify-center" : "" }`}>
-              <Badge className={`bg-[#a5059d]/10  rounded-full border-primary text-primary border`}>Moz Agency</Badge>
+              <Badge className={`bg-[#a5059d]/10  rounded-full border-primary text-primary border`}>Moy Agency</Badge>
             </motion.div>
             <motion.h3 whileInView={{ x: 0, opacity: 1 }} transition={{ duration: .5,delay:.3 }} initial={{ x: screen !== "mobile" ? -200 : 0, opacity: 0 }} className="text-primary font-bold">Buscando excelência píxel por píxel</motion.h3>
             <motion.h1 whileInView={{ x: 0, opacity: 1 }} transition={{ duration: .5, delay: .6 }} initial={{ x: screen !== "mobile" ? -350 : 0, opacity: 0 }} className={`font-bold text-3xl `}>Transformamos marcas em experiências digitais memoráveis</motion.h1>
             <motion.p whileInView={{ x: 0, opacity: 1 }} transition={{ duration: .5, delay: .9 }} initial={{ x: screen !== "mobile" ? -370 : 0, opacity: 0 }} className='text-sm text-gray-700'>Desenhamos e executamos estratégias digitais completas — do branding à performance — para empresas que querem destacar-se no cenário moçambicano e internacional com criatividade, precisão e impacto real.</motion.p>
           </div>
           <motion.div whileInView={{ opacity: 1 }} transition={{ duration: .5, delay: .13 }} initial={{ opacity: screen !== "mobile" ? 0 : 1 }} className={`flex justify-around w-full  ${ screen === "mobile" ? "ml-0" : "" } items-center`}>
-            <a href="#">
+            <a href="#quem-somos">
               <IButton variant="outline" >Saiba Mais</IButton>
             </a>
             <a href={`tel:${ contacts.phone }`}>

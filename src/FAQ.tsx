@@ -1,14 +1,19 @@
 import React, { ReactNode, useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
+import {motion} from 'framer-motion';
 
 interface FAQItem {
   question: string;
   answer: ReactNode;
 }
 
-export const FAQAccordion = ({ question, answer, isOpen, onClick }:
-  FAQItem & { isOpen: boolean; onClick: () => void }) => (
-  <div className="border-b border-gray-800">
+export const FAQAccordion = ({ question, answer, isOpen, onClick ,index}:
+  FAQItem & { isOpen: boolean; onClick: () => void ,index:number}) => (
+  <motion.div
+    initial={{ y: 200, opacity: 0 }}
+    whileInView={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.5, delay: index * 0.1 }}
+    className="border-b border-gray-800">
     <button
       className="w-full py-6 flex justify-between items-center text-left"
       onClick={onClick}
@@ -25,7 +30,7 @@ export const FAQAccordion = ({ question, answer, isOpen, onClick }:
         {answer}
       </div>
     )}
-  </div>
+  </motion.div>
 );
 
 export default function FAQ() {
@@ -58,11 +63,12 @@ export default function FAQ() {
     <section className="container mx-auto px-6 py-20" id='faqs'>
       <div className="text-center mb-16">
       <span className="text-[#490e46] text-sm uppercase tracking-wider bg-white border border-gray-300 inline-block px-4 py-2 rounded-full font-medium">FAQS</span>
-        <h2 className="text-3xl mt-4">Nós temos as respostas</h2>
+        <motion.h2 initial={{x:-200,opacity:0}} whileInView={{x:0,opacity:1}} transition={{duration:.5}} className="text-3xl mt-4">Nós temos as respostas</motion.h2>
       </div>
       <div className="max-w-3xl mx-auto ">
         {faqs.map((faq, index) => (
           <FAQAccordion
+            index={index}
             key={index}
             {...faq}
             isOpen={index === openIndex}

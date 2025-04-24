@@ -12,7 +12,7 @@ export default function GetInTouch (): ReactElement {
                             Entre em contacto conosco e vamos discutir como podemos transformar suas ideias em realidade.
                         </p>
                     </div>
-                    <IButton variant="outline" >
+                    <IButton cta variant="outline" >
                         Contactar
                     </IButton>
                 </div>

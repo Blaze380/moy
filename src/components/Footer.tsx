@@ -3,6 +3,7 @@ import { Separator } from './ui/separator';
 import { contacts } from "../lib/contacts";
 import { ScreenType, useScreen } from "../hooks/use-screen";
 import { ReactElement } from "react";
+import { Link } from "react-router-dom";
 
 export default function Footer (): ReactElement {
   const screen: ScreenType = useScreen();
@@ -15,8 +16,8 @@ export default function Footer (): ReactElement {
             <h2 className="font-bold">Sobre Nós:</h2>
             <Separator className='bg-primary-light h-[2px] w-10 mb-1' />
             <div className='flex flex-col text-xs justify-start text-gray-200'>
-              <a href="#" className='hover:text-primary'>Quem Somos</a>
-              <a href="/faq.html" className='hover:text-primary'>FAQ</a>
+              <Link to="#quem-somos"className='hover:text-primary'>Quem Somos</Link>
+              <Link to="/faq"className='hover:text-primary'>FAQ</Link>
             </div>
           </div>
           <div>
