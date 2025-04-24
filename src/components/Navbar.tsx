@@ -71,7 +71,6 @@ export default function Navbar ({ currentPage }: Props) {
             <a href="index.html#services" className="block text-gray-600 hover:text-white" onClick={() => setIsOpen(false)}>Serviços</a>
             <a href="index.html#portifolio" className="block text-gray-600 hover:text-white" onClick={() => setIsOpen(false)}>Portifólio</a>
             <a href="index.html#processo" className="block text-gray-600 hover:text-white" onClick={() => setIsOpen(false)}>Processo</a>
-            <a href="faqs.html" className="block text-gray-600 hover:text-white" onClick={() => setIsOpen(false)}>FAQs</a>
             <a href="index.html#contact" onClick={() => setIsOpen(false)}>
               <button className="bg-[#490e46] text-white px-6 py-2 rounded-full font-medium mt-2 hover:opacity-90 transition">
                 Fale Conosco

@@ -9,13 +9,13 @@ export default function Hero (): ReactElement {
   const screen: ScreenType = useScreen();
   const ref = useRef(null);
   return (
-    <motion.section ref={ref} className="h-[600px]   w-full text-wrap ">
+    <motion.section ref={ref} className={` pb-10  w-full text-wrap ${screen==="mobile"? "h-auto":"h-[600px] "} `}>
       {/*<img src="/blob-scene-haikei.svg" className="absolute z-0 top-0 h-screen w-[111vw] border-2 border-green-500 transform scale-x-[-1] m-0 p-0 rotate-180" alt="" />*/}
       <div className={`flex justify-evenly     mt-44 z-10 items-center ${ screen === "mobile" ? "flex-col-reverse justify-center" : "" }`}>
         <div className={` ${ screen === "mobile" ? "w-96  text-center" : "w-[40%]" } z-10 space-y-5 flex flex-col justify-center items-center`}>
           <div>
             <motion.div whileInView={{ x: 0, opacity: 1 }} transition={{ duration: .5 }} initial={{ x: screen !== "mobile" ? -200 : 0, opacity: 0 }} className={`flex items-center space-x-2 ${ screen === "mobile" ? "justify-center" : "" }`}>
-              <Badge className={`bg-[#a5059d]/10  rounded-full border-primary text-primary border`}>Moy Agency</Badge>
+              <Badge className={`bg-[#a5059d]/10  rounded-full border-primary text-primary border`}>MOY Agency</Badge>
             </motion.div>
             <motion.h3 whileInView={{ x: 0, opacity: 1 }} transition={{ duration: .5,delay:.3 }} initial={{ x: screen !== "mobile" ? -200 : 0, opacity: 0 }} className="text-primary font-bold">Buscando excelência píxel por píxel</motion.h3>
             <motion.h1 whileInView={{ x: 0, opacity: 1 }} transition={{ duration: .5, delay: .6 }} initial={{ x: screen !== "mobile" ? -350 : 0, opacity: 0 }} className={`font-bold text-3xl `}>Transformamos marcas em experiências digitais memoráveis</motion.h1>
@@ -30,7 +30,7 @@ export default function Hero (): ReactElement {
             </a>
           </motion.div>
         </div>
-        <motion.div whileInView={{ opacity: 1 }} transition={{ duration: .5, delay: .13 }} initial={{ opacity: screen !== "mobile" ? 0 : 1 }} className={`z-10 w-[50%]  ${ screen === "mobile" ? "hidden" : "block" }`}>
+        <motion.div whileInView={{ opacity: 1 }} transition={{ duration: .5, delay: .13 }} initial={{ opacity: screen !== "mobile" ? 0 : 1 }} className={`z-10 w-[50%]  ${ screen === "mobile" ? "hidden--- w-[90%]" : "block" }`}>
           <DotLottieReact
             src="/lottie/desktop_marketing.lottie"
             className='w-full p-0 m-0'
